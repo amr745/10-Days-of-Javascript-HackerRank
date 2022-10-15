@@ -23,36 +23,40 @@
 
 //Conditional Statements: Switch
 
-function getLetter(s) {
-    let letter;
-    switch (true) {
-        case "aeiou".includes(Array.from(s)[0]):
-            letter = "A";
-          break;
-         case "bcdfg".includes(Array.from(s)[0]):
-             letter = "B";
-           break;
-        case "hjklm".includes(Array.from(s)[0]):
-            letter = "C";
-          break;
-        case "npqrstvwxyz".includes(Array.from(s)[0]):
-            letter = "D";
-      }
-    
-      return letter;
-}
-
-console.log(getLetter("nope"))
-
 // function getLetter(s) {
-//         // let letter;
-//         let first = Array.from(s)[0]
-//         let vowels = "aeiou"
-//             if (vowels.includes(first)){
-//                 return "A";
-//             } else {
-//                 return "NO"
-//             }
+//     let letter;
+//     switch (true) {
+//         case "aeiou".includes(Array.from(s)[0]):
+//             letter = "A";
+//           break;
+//          case "bcdfg".includes(Array.from(s)[0]):
+//              letter = "B";
+//            break;
+//         case "hjklm".includes(Array.from(s)[0]):
+//             letter = "C";
+//           break;
+//         case "npqrstvwxyz".includes(Array.from(s)[0]):
+//             letter = "D";
+//       }
+    
+//       return letter;
 // }
 
-// console.log(getLetter("boy"))
+// console.log(getLetter("nope"))
+
+//Loops
+
+function vowelsAndConsonants(s) {
+    for (let i = 0; i < s.length; i++) {
+        if ("aeiou".includes(Array.from(s)[i])) {
+            console.log((s)[i])
+        }
+    }
+
+    for (let i = 0; i < s.length; i++) {
+        if ("bcdfghjklmnpqrstvwxyz".includes(Array.from(s)[i])) {
+            console.log((s)[i])
+        }
+    }
+}
+vowelsAndConsonants("javascriptloops")
